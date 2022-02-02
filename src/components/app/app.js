@@ -6,6 +6,13 @@ import EmployeesList from '../employees-list/employees-list';
 import EmployeesAddForm from '../employees-add-form/employees-add-form';
 
 export default function App() {
+
+    const data = [
+        {name: 'John Doe', salary: '800', increase: false, id: 1},
+        {name: 'Jane Doe', salary: '1400', increase: false, id: 2},
+        {name: 'Joe Smith', salary: '2300', increase: false, id: 3},
+    ];
+
     return (
         <div className="app">
             <AppInfo />
@@ -13,7 +20,7 @@ export default function App() {
                 <SearchPanel />
                 <AppFilter />
             </div>
-            <EmployeesList />
+            <EmployeesList data={data}/>
             <EmployeesAddForm />
         </div>
     )
